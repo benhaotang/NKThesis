@@ -1,0 +1,16 @@
+20190413
+数院发布当前版本的硕士和博士论文模板
+20211102
+修改高校教师为本科，添加学士学位论文的相关属性
+20211201
+修正原本数院模板中不区分varphi,phi,varepsilon和epsilon的问题
+20211210
+修正原本数院模板中引用出现英文标题的问题
+20211214
+调整引用的sytle sheet，目前已经满足GBT7714-2005且可以在新版本tex系统下正常编译
+20220316
+按照本科生模板的要求修改，修改了开篇、目录、摘要、页边距等要求，需要使用本科生模板需要在documentclass的方括号中输入benke，其他的毕业论文请去掉benke字符
+如果您已经使用了211214开始写作，请直接用新版中的NKThesis.config、NKThesisbenke.cfg、main.tex和NKThesis.sty共四个文件覆盖原本的版本即可！
+
+
+更多问题请访问https://article.benhaotang.cn/pc/26.html

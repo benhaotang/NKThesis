@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%            南开大学毕业论文模板
+%%                Ver 220316.1
+%%         原模板作者：数院孙文昌教授
+%%        物院本地化&新版本维护：唐本豪
+%%         (benhaotang@outlook.com)
+%%发布页：https://article.benhaotang.cn/pc/26.html
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%使用注意：
+%%  本模板推荐使用XeLaTeX，请不要使用CTeX！！下载最新的TeXLive
+%%  https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
+%%  注意：
+%%    1. 在改变编译方式前应先删除 *.toc 和 *.aux 文件，
+%%       因为不同编译方式产生的辅助文件格式可能并不相同。
+%%    2. 引用请修改nkthesis.bib并采用bibtex
+%%    3. 为了减少不必要的麻烦，请把正文写在mainbody.tex中
+%%    4. 本科请在documentclass追加benke关键字，反之请删除
+%%
+%% 本模板原始来自于数学科学学院孙文昌教授按照2017年南开大学硕士博士毕业论文要求编写，
+%%  感谢孙老师完成了整个模板的标准格式编写
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[benke,12pt,openright]{book}
+%\documentclass[12pt,openright]{book}本科以外的毕业论文
+\usepackage{xifthen}
+\usepackage{ifxetex}
+\usepackage{pdftexcmds}
+\ifxetex
+  \usepackage[bookmarksnumbered]{hyperref}
+\else
+  \usepackage[unicode,bookmarksnumbered]{hyperref}
+\fi
+\usepackage[emptydoublepage]{NKThesis}   % 中文
+%\usepackage[emptydoublepage,English]{NKThesis} % 英文
+\usepackage{amssymb}
+%   根据需要选择 biblatex 宏包选项.
+\usepackage[
+backend = biber, style = gbt77142005, utf8
+]{biblatex}%211214 这里引用了国标的标准引用格式，为了正常使用，建议不要再更改任何与bibtex相关的设置了。另外这里虽然是借鉴了github上的那个项目，但是由于兼容性问题已经把github上原来的代码不兼容的地方改掉了，请不要再去百度上搜索再重新覆盖了，出现编译问题我没办法再帮助您了。
+\hypersetup{colorlinks=true,
+            pdfborder=0 0 1,
+            citecolor=black,
+            linkcolor=black}
+\usepackage{tikz}
+\usepackage{amsmath}
+\DeclareSymbolFont{epsilon}{OML}{ntxmi}{m}{it}
+\DeclareMathSymbol{\epsilon}{\mathord}{epsilon}{"0F}%追加对于varepsilon支持 211214
+\addbibresource{nkthesis.bib}
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+\includeonly{
+abstract,
+mainbody,
+acknowledgements,
+references,
+appendices,
+resume
+}
+\newtheorem{Theorem}{\hskip 2em 定理}[chapter]
+\newtheorem{Lemma}[Theorem]{\hskip 2em 引理}
+\newtheorem{Corollary}[Theorem]{\hskip 2em 推论}
+\newtheorem{Proposition}[Theorem]{\hskip 2em 命题}
+\newtheorem{Definition}[Theorem]{\hskip 2em 定义}
+\newtheorem{Example}[Theorem]{\hskip 2em 例}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\begin{document}
+
+%  设置基本信息
+%  注意:  逗号`,'是项目分隔符. 如果某一项的值出现逗号, 应放在花括号内, 如 {,}
+%
+\NKTsetup{%
+  论文题目(中文) = 论文中文题目,
+  副标题         = 论文中文副标题,
+  论文题目(英文) =  English Title,
+  论文作者       = 张十三,
+  学号           = 1810xxx,
+  年级               = 2018,
+  系别               = 物理,
+  指导教师       = 张三\quad 教授,
+  申请学位       = 理学学士,
+  培养单位       = 物理科学学院,
+  学科专业       = 某某某某,
+  研究方向       = 某某某某,
+  中图分类号     = ,
+  UDC            = ,
+  学校代码       = 10055,
+  密级           = 公开,
+                   % 公开 | 限制 | 秘密 | 机密, 若为公开, 不填以下三项
+  保密期限       = ,
+  审批表编号     = ,
+  批准日期       = ,
+  论文完成时间   = 二〇二一年十一月,
+  答辩日期       = ,
+  论文类别       = 本科,
+                   % 本科 | 博士 | 学历硕士 | 硕士专业学位 | 高校教师 | 同等学力硕士
+                   % 211102 追加了本科学士学位，去除了高校教师的选项
+  学院(单位)       = 物理科学学院,
+  答辩委员会主席       = 李四,
+  评阅人       = 李四\quad 王五,
+  专业           = 某某某某,
+  联系电话       = 1234567,
+  Email          = 1810xxx@nankai.edu.cn,
+  通讯地址(邮编) = 天津市南开区卫津路94号(300071),
+  备注           = }
+
+
+\include{abstract}
+\tableofcontents
+\include{mainbody}
+\include{references}
+\include{acknowledgements}
+\include{appendices}
+\include{resume}
+\end{document}
