@@ -22,7 +22,7 @@
 
 # 历史版本
 
-- [<u>NKT220316</u>](https://github.com/benhaotang/NKThesis/releases/tag/220317 "NKT220317")
+- [<u>NKT220317</u>](https://github.com/benhaotang/NKThesis/releases/tag/220317 "NKT220317")
 	- [fix] 修正本科模板中英文题目太长不能换行的问题
 - [<u>NKT220316</u>](https://github.com/benhaotang/NKThesis/releases/tag/220316 "NKT220316")
 	- [fix] 修正本科模板为2022年最新标准
