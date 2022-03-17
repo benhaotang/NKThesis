@@ -28,10 +28,10 @@
 
 
 # 课件
-[https://article.benhaotang.cn/LaTeX-NKU-T220205.pdf](https://article.benhaotang.cn/LaTeX-NKU-T220205.pdf)
+[https://github.com/benhaotang/NKThesis/blob/main/LaTeX-NKU-T220205.pdf](https://github.com/benhaotang/NKThesis/blob/main/LaTeX-NKU-T220205.pdf)
 
-# 录播（电脑端点击图片即可跳转）
+# 讲座录播（电脑端点击图片即可跳转）
 
 <a href="https://pan.baidu.com/s/1ikhxvIl69SR7LL8_l5eNeg?pwd=94tk"><img src="https://article.benhaotang.cn/content/uploadfile/202202/54771643991166.jpg" width=100px alt="百度网盘地址" /></a>
 
-更多问题欢迎访问[https://article.benhaotang.cn/pc/26.html](https://article.benhaotang.cn/pc/26.html)
+更多问题欢迎访问发布页[https://article.benhaotang.cn/pc/26.html](https://article.benhaotang.cn/pc/26.html)
