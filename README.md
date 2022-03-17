@@ -28,8 +28,7 @@
 
 
 # 课件
-<iframe id="myframe" src="https://article.benhaotang.cn/pdfjs/web/viewer.html?file=https://article.benhaotang.cn/LaTeX-NKU-T220205.pdf" width="100%" height="800" frameborder="0">
-</iframe>
+[https://article.benhaotang.cn/LaTeX-NKU-T220205.pdf](https://article.benhaotang.cn/LaTeX-NKU-T220205.pdf)
 
 # 录播（电脑端点击图片即可跳转）
 
