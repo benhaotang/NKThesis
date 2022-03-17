@@ -22,8 +22,6 @@
 
 \newif\if@NKT@English
 \DeclareOption{English}{\@NKT@Englishtrue}
-\newif\if@isbenke
-\DeclareOption{benke}{\@isbenketrue}
 
 \ProcessOptions\relax
 
@@ -105,11 +103,7 @@
   \def\chaptername{第\CJKnumber{\arabic{chapter}}章}
   \def\thesection{第\CJKnumber{\arabic{section}}节}
   \def\thesubsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
-  \if@isbenke
-    \def\contentsname{目\hskip 1em 录}
-  \else
-    \def\contentsname{目录}
-  \fi
+  \def\contentsname{目录}
   \def\appendixnamenonumber{附录}
   \def\nkrefname{参考文献}
   \def\tablename{表}
@@ -548,19 +542,6 @@
 \newcount\NKT@itemcnt
 \NKT@itemcnt=0
 
-\def\standardpagesetbenke{
-  \paperwidth 210mm
-  \paperheight 297mm
-  \textheight 246.2mm
-  \textwidth 146.6mm
-  \oddsidemargin 31.7mm
-  \advance\oddsidemargin -1in
-  \evensidemargin \oddsidemargin
-  \topmargin 25.4mm
-  \advance \topmargin -1in
-  \advance \topmargin -\headsep
-  \advance \topmargin -\headheight
-  \relax}
 \def\standardpageset{
   \paperwidth 210mm
   \paperheight 297mm
@@ -574,11 +555,8 @@
   \advance \topmargin -\headsep
   \advance \topmargin -\headheight
   \relax}
-\if@isbenke
-    \standardpagesetbenke
-\else
-    \standardpageset
-\fi
+\standardpageset
+
 \def\overchapterspace{24pt}
 \def\belowchapterspace{18pt}
 
@@ -637,9 +615,6 @@
 \NKT@definekey{论文题目(英文)}      {lunwentimuy}
 \NKT@definekey{论文作者}            {lunwenzuozhe}
 \NKT@definekey{学号}                {xuehao}
-\NKT@definekey{年级}                {nianji}
-\NKT@definekey{系别}                {xibie}
-\NKT@definekey{学号}                {xuehao}
 \NKT@definekey{指导教师}            {zhidaojiaoshi}
 \NKT@definekey{申请学位}            {shenqingxuewei}
 \NKT@definekey{培养单位}            {peiyangdanwei}
@@ -675,8 +650,7 @@
       \csname CJK@makeActive\endcsname}
   \else
     \let\NKT@restoreCJK\relax
-  \fi
-  }
+  \fi}
 
 \def\NKTsetup{%
   \NKT@disableCJK
@@ -690,16 +664,9 @@
     \NKT@restoreCJK
     \pagestyle{empty}
     \@twosidefalse
-    \ifx\NKT@key@lunwenleibie\NKT@string@benke
-      \standardpagesetbenke
-      \NKTtitlepagebenke
-      \NKTdeclarationbenke
-      \NKTauthorizationbenke
-    \else
-      \NKTtitlepage
-      \NKTdeclaration
-      \NKTauthorization
-    \fi
+    \NKTtitlepage
+    \NKTdeclaration
+    \NKTauthorization
     \clearpage
     \ifx\NKT@key@lunwenleibie\NKT@string@boshi
       \global\@twosidetrue
@@ -717,7 +684,6 @@
   \scantokens\expandafter{\NKT@temp}}
 
 
-\input{NKThesisbenke.cfg}
 \input{NKThesis.cfg}
 \input{NKTfonts.cfg}
 
@@ -733,8 +699,6 @@
 \def\XeLaTeX{X\kern-.1667em\lower.5ex\hbox{\reflectbox{E}}\kern-.1667em\LaTeX}
 
 \def\XeTeX{X\kern-.1667em\lower.5ex\hbox{\reflectbox{E}}\kern-.1667em\TeX}
-
-
 
 %
 %  删除列表项之间的间隔.

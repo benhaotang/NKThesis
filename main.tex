@@ -1,31 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%            南开大学毕业论文模板
-%%                Ver 220316.1
+%%                Ver 211214.2
 %%         原模板作者：数院孙文昌教授
 %%        物院本地化&新版本维护：唐本豪
 %%         (benhaotang@outlook.com)
-%%发布页：https://article.benhaotang.cn/pc/26.html
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%使用注意：
-%%  本模板推荐使用XeLaTeX，请不要使用CTeX！！下载最新的TeXLive
-%%  https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
+%%  本模板推荐使用XeLaTeX
+%%
 %%  注意：
 %%    1. 在改变编译方式前应先删除 *.toc 和 *.aux 文件，
 %%       因为不同编译方式产生的辅助文件格式可能并不相同。
 %%    2. 引用请修改nkthesis.bib并采用bibtex
 %%    3. 为了减少不必要的麻烦，请把正文写在mainbody.tex中
-%%    4. 本科请在documentclass追加benke关键字，反之请删除
 %%
-%% 本模板原始来自于数学科学学院孙文昌教授按照2017年南开大学硕士博士毕业论文要求编写，
+%%  本模板原始来自于数学科学学院孙文昌教授按照2017年南开大学毕业论文要求编写，
 %%  感谢孙老师完成了整个模板的标准格式编写
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[benke,12pt,openright]{book}
-%\documentclass[12pt,openright]{book}本科以外的毕业论文
+\documentclass[12pt,openright]{book}
 \usepackage{xifthen}
 \usepackage{ifxetex}
-\usepackage{pdftexcmds}
 \ifxetex
   \usepackage[bookmarksnumbered]{hyperref}
 \else
@@ -75,8 +71,6 @@ resume
   论文题目(英文) =  English Title,
   论文作者       = 张十三,
   学号           = 1810xxx,
-  年级               = 2018,
-  系别               = 物理,
   指导教师       = 张三\quad 教授,
   申请学位       = 理学学士,
   培养单位       = 物理科学学院,
