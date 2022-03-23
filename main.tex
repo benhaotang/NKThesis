@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%            南开大学毕业论文模板
-%%                Ver 220316.1
+%%                Ver 220323.1
 %%         原模板作者：数院孙文昌教授
 %%        物院本地化&新版本维护：唐本豪
 %%         (benhaotang@outlook.com)
@@ -22,7 +22,8 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[benke,12pt,openright]{book}
-%\documentclass[12pt,openright]{book}本科以外的毕业论文
+%\documentclass[benke,shuangxuewei,12pt,openright]{book}%本科双学位
+%\documentclass[12pt,openright]{book}%本科以外的毕业论文
 \usepackage{xifthen}
 \usepackage{ifxetex}
 \usepackage{makecell}
@@ -65,7 +66,6 @@ resume
 \newtheorem{Example}[Theorem]{\hskip 2em 例}
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 \begin{document}
-
 %  设置基本信息
 %  注意:  逗号`,'是项目分隔符. 如果某一项的值出现逗号, 应放在花括号内, 如 {,}
 %
@@ -95,6 +95,8 @@ resume
   论文类别       = 本科,
                    % 本科 | 博士 | 学历硕士 | 硕士专业学位 | 高校教师 | 同等学力硕士
                    % 211102 追加了本科学士学位，去除了高校教师的选项
+  %双修专业       = 数学,
+  %双修院系       = 数学科学学院,
   学院(单位)       = 物理科学学院,
   答辩委员会主席       = 李四,
   评阅人       = 李四\quad 王五,

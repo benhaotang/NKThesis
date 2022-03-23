@@ -24,6 +24,8 @@
 \DeclareOption{English}{\@NKT@Englishtrue}
 \newif\if@isbenke
 \DeclareOption{benke}{\@isbenketrue}
+\newif\if@isshuangxuewei
+\DeclareOption{shuangxuewei}{\@isshuangxueweitrue}
 
 \ProcessOptions\relax
 
@@ -102,12 +104,16 @@
   \def\figurename{Figure}
   \def\NKT@proof{Proof}
 \else
-  \def\chaptername{第\CJKnumber{\arabic{chapter}}章}
-  \def\thesection{第\CJKnumber{\arabic{section}}节}
-  \def\thesubsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
   \if@isbenke
+    \def\chaptername{\CJKnumber{\arabic{chapter}}、\hskip -3mm}
+    \def\thesection{（\CJKnumber{\arabic{section}}）\hskip -3mm}
+    \def\thesubsection{\arabic{subsection}.\hskip -3mm}
+    \def\thesubsubsection{(\arabic{subsubsection})\hskip -3mm}
     \def\contentsname{目\hskip 1em 录}
   \else
+    \def\chaptername{第\CJKnumber{\arabic{chapter}}章}
+    \def\thesection{第\CJKnumber{\arabic{section}}节}
+    \def\thesubsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
     \def\contentsname{目录}
   \fi
   \def\appendixnamenonumber{附录}
@@ -178,21 +184,26 @@
 
 \def\@seccntformat#1{\csname the#1\endcsname\quad}
 
-\def\section{
-  \@startsection{section}{1}{\z@}{24pt}{6pt}{\sectionformat}}
+\def\section{\@startsection{section}{1}{\z@}{24pt}{6pt}{\sectionformat}}
 
-\def\subsection{
-  \@startsection{subsection}{2}{\z@}{12pt}{6pt}{\subsectionformat}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{14pt}{6pt}{\subsectionformat}}
 
-\def\subsubsection{
-  \@startsection{subsubsection}{3}{\z@}{12pt}{6pt}{\subsubsectionformat}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{12pt}{6pt}{\subsubsectionformat}}
 
 \def\sectionspecial{\jiacu}
 \def\partformat{\centering\huge\bfseries}
-\def\chapterformat{\centering\fontsize{16}{19}\bfseries\jiacu}
-\def\sectionformat{\centering\bfseries\zihaosi}
-\def\subsectionformat{\bfseries\fontsize{13}{15}\selectfont}
-\def\subsubsectionformat{\bfseries\zihaowu}
+\if@isbenke
+    \def\chapterformat{\centering\fontsize{15}{19}\bfseries\jiacu}
+    \def\sectionformat{\centering\bfseries\fontsize{14}{15}\selectfont}
+    \def\subsectionformat{\bfseries\fontsize{12}{15}\selectfont}
+    \def\subsubsectionformat{\bfseries\fontsize{12}{15}\selectfont}
+\else
+    \def\chapterformat{\centering\fontsize{16}{19}\bfseries\jiacu}
+    \def\sectionformat{\centering\bfseries\zihaosi}
+    \def\subsectionformat{\bfseries\fontsize{13}{15}\selectfont}
+    \def\subsubsectionformat{\bfseries\zihaowu}
+\fi
+
 
 
 \def\chapter{
@@ -657,6 +668,8 @@
 \NKT@definekey{论文完成时间}        {lunwenwanchengshijian}
 \NKT@definekey{答辩日期}            {dabianriqi}
 \NKT@definekey{论文类别}            {lunwenleibie}
+\NKT@definekey{双修专业}            {shuangzhuanye}
+\NKT@definekey{双修院系}            {shuangyuanxi}
 \NKT@definekey{学院(单位)}            {yuanxisuo}
 \NKT@definekey{专业}                {zhuanye}
 \NKT@definekey{联系电话}            {lianxidianhua}
