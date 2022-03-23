@@ -3,25 +3,25 @@
 
 # 附件下载链接
 
-当前版本：220317
+当前版本：220323
 
 |NKThesis最新版|NKBeamer最新版|NKThesis 211214 Mac预配置版|
 |:-:|:-:|:-:|
-|[<u>NKThesis下载</u>](https://github.com/benhaotang/NKThesis/releases/tag/220317 "NKThesis最新版")|[<u>NKBeamer下载</u>](https://www.benhaotang.cn/NKB.zip "NKBeamer最新版")|[<u>NKThesis Mac包 下载</u>](https://www.benhaotang.cn/NKT_Mac.zip "NKThesis 211204 Mac预配置版")|
+|[<u>NKThesis下载</u>](https://github.com/benhaotang/NKThesis/releases/tag/220323 "NKThesis最新版")|[<u>NKBeamer下载</u>](https://www.benhaotang.cn/NKB.zip "NKBeamer最新版")|[<u>NKThesis Mac包 下载</u>](https://www.benhaotang.cn/NKT_Mac.zip "NKThesis 211204 Mac预配置版")|
 
 <font color=red>**注意!!!**
 
 - 从220316版本开始，如果您需要版本编译非本科论文，请去掉documentclass方括号中的benke字段!!!!!
-- **211214-220316无创更新方法:利用用新版中的NKThesis.cfg、NKThesisbenke.cfg、main.tex和NKThesis.sty共四个文件覆盖原本的版本即可！**
+- **211214-2203xx无创更新方法:利用用新版中的NKThesis.cfg、NKThesisbenke.cfg、main.tex和NKThesis.sty共四个文件覆盖原本的版本即可！**
 - 请不要使用CTeX编译，CTeX对于biber已经被抛弃，请卸载本地CTeX后安装最新版TeXLive[https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/ "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/")，TeXLive对于CTeX中的MikTeX2.9和TeXLive2014是向下兼容的！
 </font>
 
 
 
-![](https://article.benhaotang.cn/content/uploadfile/202203/13ae1647482854.jpg)
-
 # 历史版本
 
+- [<u>NKT220323</u>](https://github.com/benhaotang/NKThesis/releases/tag/220323 "NKT220323")
+	- [fix] 修正本科生论文章节标题的字号、项目符号等要求，增加双辅修
 - [<u>NKT220317</u>](https://github.com/benhaotang/NKThesis/releases/tag/220317 "NKT220317")
 	- [fix] 修正本科模板中英文题目太长不能换行的问题
 - [<u>NKT220316</u>](https://github.com/benhaotang/NKThesis/releases/tag/220316 "NKT220316")
