@@ -4,23 +4,22 @@
 
 \section{注意}
 
-模板在2021年11月2日更新后在CTEX2.7和Texlive2021(Mac\TeX 2021)下测试\XeLaTeX 和PDF\LaTeX 通过， MiKTeX无法编译成功，Overleaf缺少对应的CJK字体也无法编译成功，请确保系统中安装了simHei（黑体）、simKai（楷体）、simSun（宋体）才能正常显示，请注意编译后要使用bibtex重新编译以更新目录和引用（如果使用WinEdt，建议安装LaTeXify插件简化此过程，其他编译器也有类似方法）。对于其它 TeX 发行版可能需要做个别修改。本模板改编自孙老师（http://222.30.48.141/$\sim$sunwch）的版本，格式参照南开大学2019年博士硕士毕业论文格式+2022年本科生毕业论文格式要求。
+模板在2021年11月2日更新后在CTEX2.7和Texlive2021(Mac\TeX 2021)下测试\XeLaTeX 和PDF\LaTeX 通过， MiKTeX无法编译成功，Overleaf缺少对应的CJK字体也无法编译成功，请确保系统中安装了simHei（黑体）、simKai（楷体）、simSun（宋体）才能正常显示，请注意编译后要使用bibtex重新编译以更新目录和引用（如果使用WinEdt，建议安装LaTeXify插件简化此过程，其他编译器也有类似方法）。对于其它 TeX 发行版可能需要做个别修改。本模板改编自孙老师（http://222.30.48.141/$\sim$sunwch）的版本，格式参照南开大学2019年博士硕士毕业论文格式+2022年本科生毕业论文格式要求\footnote{220325 修正尾注}。
 
 \section{NKThesis 使用说明}
 
-本模板可以使用以下两种方式编译:
+本模板可以使用以下方式编译:
 \begin{enumerate}
- \item PDF\LaTeX
 
- \item \XeLaTeX [推荐]
+ \item \XeLaTeX
 \end{enumerate}
 
 例如，
 \begin{verbatim}
-         pdflatex main
-         bibtex main      % 处理参考文献
-         pdflatex main   % 连续编译两遍
-         pdflatex main   % 以生成正确的文献引用。
+         xelatex main
+         biber main      % 处理参考文献
+         xelatex main   % 连续编译两遍
+         xelatex main   % 以生成正确的文献引用。
 \end{verbatim}
 
 

@@ -2,7 +2,6 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{NKThesis}[2016/10/12]
-
 \DeclareOption{emptydoublepage}{
   \def\cleardoublepage{
     \clearpage
@@ -105,11 +104,19 @@
   \def\NKT@proof{Proof}
 \else
   \if@isbenke
+    \RequirePackage{pifont}
     \def\chaptername{\CJKnumber{\arabic{chapter}}、\hskip -3mm}
     \def\thesection{（\CJKnumber{\arabic{section}}）\hskip -3mm}
     \def\thesubsection{\arabic{subsection}.\hskip -3mm}
     \def\thesubsubsection{(\arabic{subsubsection})\hskip -3mm}
     \def\contentsname{目\hskip 1em 录}
+    \def\thefootnote{\ding{\numexpr 171+\arabic{footnote} \relax}}
+    \RequirePackage{xpatch}
+    \xpatchcmd\@makefntext
+    {{\hss\@makefnmark}}
+    {{\hss\@makefnmark@nosuperscript}\space}
+    {}{\fail}
+    \def\@makefnmark@nosuperscript{\lower .3ex \hbox{\normalfont\@thefnmark}}
   \else
     \def\chaptername{第\CJKnumber{\arabic{chapter}}章}
     \def\thesection{第\CJKnumber{\arabic{section}}节}
@@ -182,6 +189,16 @@
   \fi
   \@xsect{#5}}
 
+\RequirePackage{appendix}
+\newenvironment{Appendix}{
+\if@NKT@English
+    \chapter*{Appendix}
+\else
+    \chapter*{附录}
+\fi
+\begin{appendices}
+\def\thesection{\Alph{section}}
+\def\thesubsection{\Alph{section}.\arabic{section}.\arabic{subsection}}}{\end{appendices}}
 \def\@seccntformat#1{\csname the#1\endcsname\quad}
 
 \def\section{\@startsection{section}{1}{\z@}{24pt}{6pt}{\sectionformat}}
