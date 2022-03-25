@@ -11,7 +11,7 @@
 
 <font color=red>**注意!!!**
 
-- 从220316版本开始，如果您需要版本编译非本科论文，请去掉documentclass方括号中的benke字段!!!!!
+- 从220316版本开始，如果您需要版本编译非本科论文，请去掉documentclass方括号中的benke字段!!!!!双辅修请追加benke,shuangxuewei字段！
 - **211214-2203xx无创更新方法:利用用新版中的NKThesis.cfg、NKThesisbenke.cfg、main.tex和NKThesis.sty共四个文件覆盖原本的版本即可！**
 - 请不要使用CTeX编译，CTeX对于biber已经被抛弃，请卸载本地CTeX后安装最新版TeXLive[https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/ "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/")，TeXLive对于CTeX中的MikTeX2.9和TeXLive2014是向下兼容的！
 </font>
@@ -20,6 +20,9 @@
 
 # 历史版本
 
+- [<u>NKT220325</u>](https://github.com/benhaotang/NKThesis/releases/tag/220325 "NKT220325")
+	- [fix] 修正本科生论文脚注格式
+	- [add] 追加附录
 - [<u>NKT220323</u>](https://github.com/benhaotang/NKThesis/releases/tag/220323 "NKT220323")
 	- [fix] 修正本科生论文章节标题的字号、项目符号等要求，增加双辅修
 - [<u>NKT220317</u>](https://github.com/benhaotang/NKThesis/releases/tag/220317 "NKT220317")
