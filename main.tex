@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%            南开大学毕业论文模板
-%%                Ver 220325.1
+%%                Ver 220329.1
 %%         原模板作者：数院孙文昌教授
 %%        物院本地化&新版本维护：唐本豪
 %%         (benhaotang@outlook.com)
@@ -45,8 +45,6 @@ backend = biber, style = gbt77142005, utf8
             linkcolor=black}
 \usepackage{tikz}
 \usepackage{amsmath}
-\DeclareSymbolFont{epsilon}{OML}{ntxmi}{m}{it}
-\DeclareMathSymbol{\epsilon}{\mathord}{epsilon}{"0F}%追加对于varepsilon支持 211214
 \addbibresource{nkthesis.bib}
 \DeclareBibliographyCategory{cited}
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
@@ -110,8 +108,8 @@ resume
 \include{abstract}
 \tableofcontents
 \include{mainbody}
+\include{appendices}
 \include{references}
 \include{acknowledgements}
-\include{appendices}
 \include{resume}
 \end{document}
