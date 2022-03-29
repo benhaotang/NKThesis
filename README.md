@@ -3,11 +3,11 @@
 
 # 附件下载链接
 
-当前版本：220323
+当前版本：220329
 
 |NKThesis最新版|NKBeamer最新版|NKThesis 211214 Mac预配置版|
 |:-:|:-:|:-:|
-|[<u>NKThesis下载</u>](https://github.com/benhaotang/NKThesis/releases/tag/220323 "NKThesis最新版")|[<u>NKBeamer下载</u>](https://www.benhaotang.cn/NKB.zip "NKBeamer最新版")|[<u>NKThesis Mac包 下载</u>](https://www.benhaotang.cn/NKT_Mac.zip "NKThesis 211204 Mac预配置版")|
+|[<u>NKThesis下载</u>](https://github.com/benhaotang/NKThesis/releases/tag/220329 "NKThesis最新版")|[<u>NKBeamer下载</u>](https://www.benhaotang.cn/NKB.zip "NKBeamer最新版")|[<u>NKThesis Mac包 下载</u>](https://www.benhaotang.cn/NKT_Mac.zip "NKThesis 211204 Mac预配置版")|
 
 <font color=red>**注意!!!**
 
@@ -19,7 +19,8 @@
 
 
 # 历史版本
-
+- [<u>NKT220329</u>](https://github.com/benhaotang/NKThesis/releases/tag/220329 "NKT220329")
+	- [fix] 修正數學字符找不到的問題
 - [<u>NKT220325</u>](https://github.com/benhaotang/NKThesis/releases/tag/220325 "NKT220325")
 	- [fix] 修正本科生论文脚注格式
 	- [add] 追加附录
