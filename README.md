@@ -21,7 +21,7 @@
 
 
 # 历史版本
-- [<u>NKT220329</u>](https://github.com/benhaotang/NKThesis/releases/tag/220518 "NKT220518")
+- [<u>NKT220518</u>](https://github.com/benhaotang/NKThesis/releases/tag/220518 "NKT220518")
 	- [fix] 答辩后最终版的细节修正，本版本后该项目将不再维护
 - [<u>NKT220329</u>](https://github.com/benhaotang/NKThesis/releases/tag/220329 "NKT220329")
 	- [fix] 修正數學字符找不到的問題
