@@ -19,5 +19,7 @@
 修正本科生论文脚注格式，追加附录，请直接用新版中的NKThesis.cfg文件覆盖，附录格式参照appendices.tex
 20220329
 修正数学字符丢失的问题，请直接用新版中的NKThesis.sty文件覆盖
+20220518
+答辩后最后的细节修正
 
 更多问题请访问https://article.benhaotang.cn/pc/26.html
