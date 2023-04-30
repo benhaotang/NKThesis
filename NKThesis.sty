@@ -35,7 +35,7 @@
 \ifxetex
   \RequirePackage{xeCJK}
   \edef\CJK@UnicodeEnc{UTF8}
-  \def\CJKaddEncHook#1#2{\expandafter\def\csname xeCJK@enc@#1\endcsname{#2}}
+  %\def\CJKaddEncHook#1#2{\expandafter\def\csname xeCJK@enc@#1\endcsname{#2}}
   \def\Unicode#1#2{\@tempcnta#1\relax
     \multiply\@tempcnta 256\relax
     \advance\@tempcnta#2\relax
@@ -130,7 +130,6 @@
   \def\figurename{图}
   \def\NKT@proof{证明}
 \fi
-
 
 \RequirePackage{mathptmx}
 \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
@@ -652,7 +651,6 @@
 \def\NKT@definekey#1#2{
   \define@key{NKT}{#1}{
     \expandafter\def\csname NKT@key@#2\endcsname{##1}}}
-
 \csname CJK@makeInactive\endcsname
 \def\NKT@string@boshi{博士}
 \def\NKT@string@xuelishuoshi{学历硕士}
@@ -744,9 +742,7 @@
   \pagestyle{centerheadings}}
 
 \def\NKT@keyvalue#1{%
-  \edef\NKT@temp{\csname NKT@key@#1\endcsname}%
-  \scantokens\expandafter{\NKT@temp}}
-
+  \edef\NKT@temp{\csname NKT@key@#1\endcsname}\scantokens\expandafter{\NKT@temp}}
 
 \input{NKThesisbenke.cfg}
 \input{NKThesis.cfg}

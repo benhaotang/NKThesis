@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%            南开大学毕业论文模板
-%%                Ver 220329.1
+%%                Ver 230430.0
 %%         原模板作者：数院孙文昌教授
 %%        物院本地化&新版本维护：唐本豪
 %%         (benhaotang@outlook.com)
@@ -35,6 +35,7 @@
 \usepackage[emptydoublepage]{NKThesis}   % 中文
 %\usepackage[emptydoublepage,English]{NKThesis} % 英文
 \usepackage{amssymb}
+\usepackage{amsmath}
 %   根据需要选择 biblatex 宏包选项.
 \usepackage[
 backend = biber, style = gbt77142005, utf8
@@ -44,7 +45,6 @@ backend = biber, style = gbt77142005, utf8
             citecolor=black,
             linkcolor=black}
 \usepackage{tikz}
-\usepackage{amsmath}
 \addbibresource{nkthesis.bib}
 \DeclareBibliographyCategory{cited}
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
@@ -66,7 +66,8 @@ resume
 \begin{document}
 %  设置基本信息
 %  注意:  逗号`,'是项目分隔符. 如果某一项的值出现逗号, 应放在花括号内, 如 {,}
-%
+%  设定参数时，由于LaTeX传参限制，即使在expendafter后也无法传递带参数的指令，如\bar{x}，但是可以传递不带参数的指令，如\alpha。
+%  对于此目前没有特别好的解决方案，临时方法是直接替换对应cfg文件中需要修改的字符串。
 \NKTsetup{%
   论文题目(中文) = 论文中文题目,
   副标题         = 论文中文副标题,
